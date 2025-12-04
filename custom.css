@@ -1,0 +1,58 @@
+/* remove h2 underline */
+h2 {
+  display: inline-block;   /* shrink box to text width */
+  border-bottom: 0px solid #00424f; /* your underline */
+}
+
+/* Override banner background color */
+.quarto-title-block .quarto-title-banner {
+  background-color: #00424f;   /* your chosen banner color */
+  color: white;                /* optional: text color */
+}
+
+.quarto-title-banner {
+  background-image: url("wpi_tfl_logo.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 600px;
+}
+
+
+/* Optional: tweak padding/spacing */
+.quarto-title-block .quarto-title-banner {
+  padding: -1em;
+  margin-block-end: -2rem;
+}
+
+.line-block {
+  padding: 2em;
+}
+
+.cr-section .sticky-col .sticky-col-stack .sticky {
+  padding: 1em;
+}
+
+
+.html-widget {
+  width: 60vw !important;   /* fill the parent column */
+  height: 90vh !important;        /* let height adapt */
+  margin: 0 auto;           /* center if capped */
+}
+
+
+/* Axis labels (tick labels) */
+.highcharts-axis-labels text {
+  font-size: 14px !important;
+  font-family: Roboto, sans-serif;
+  fill: #00424f;   /* text color */
+}
+
+/* Axis titles (the "X Axis", "Y Axis" text) */
+.highcharts-axis-title text {
+  font-size: 14px !important;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  fill: #00424f;
+}
+
+
