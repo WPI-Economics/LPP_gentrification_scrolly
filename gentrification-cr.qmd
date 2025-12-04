@@ -95,7 +95,7 @@ This boxplot shows median incomes within all MSOAs across London, adjusted to 20
 Looking at each of ONS' small area income estimates since 2011/12 together, we see average MSOA incomes appear fairly stable between 2011/12 and 2019/20.
 
 ::: {#cr-income-boxplots}
-```{r income-boxplots, include = TRUE, echo = FALSE, message = FALSE}
+```{r income-boxplots, include = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
 
 library(tidyverse)
 library(highcharter)
