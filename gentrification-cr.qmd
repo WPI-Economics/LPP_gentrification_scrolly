@@ -1468,11 +1468,11 @@ dfx$tooltip1 <- dfx$MSOA21HCLNM
 #                             object = "Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3_2024-12-16.rds", 
 #                             bucket = "wpi-spatial-data/MSOA")
 
-msoa_bounds <- s3read_using(readRDS, # here you tell the s3read_using which read function you are using, and the arguments of the function can follow inside after a comma as you would in the original function)
-                            object = "msoa21_bounds_UGC.rds", 
-                            bucket = "wpi-spatial-data/MSOA")
+# msoa_bounds <- s3read_using(readRDS, # here you tell the s3read_using which read function you are using, and the arguments of the function can follow inside after a comma as you would in the original function)
+#                             object = "msoa21_bounds_UGC.rds", 
+#                             bucket = "wpi-spatial-data/MSOA")
 
-
+msoa_bounds <- readRDS("msoa21_bounds_UGC.rds")
 
 msoa_bounds$`MSOA name` <- msoa_bounds$MSOA21NM
 
@@ -1772,9 +1772,10 @@ Chart_Source <- "London's Poverty Profile 2024"
 #read in the data
 df <- read_csv("plot-inputs/4_school_admissions.csv") %>% rename("ONS_CODE" = new_la_code)
 
-bounds <- s3read_using(FUN = readRDS, 
-                       bucket = "wpi-spatial-data/LAD", 
-                       object = "LAUA23_BGC_simple2024-12-16.rds")
+# bounds <- s3read_using(FUN = readRDS, 
+#                        bucket = "wpi-spatial-data/LAD", 
+#                        object = "LAUA23_BGC_simple2024-12-16.rds")
+bounds <- readRDS("LAUA23_BGC_simple2024-12-16.rds")
 
 #filter to the London and surrounding UAs
 bounds <- bounds %>% filter(ONS_CODE %in% df$ONS_CODE[df$London_marker %in% c("London", "border")])
